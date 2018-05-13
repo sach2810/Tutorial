@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c70d078b-a483-45c7-b31e-a934bbca0d1f" activeEnvironment="Default" name="LoanEligibilityDemo" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="3db5d297-69ba-4e3a-9d76-d37c38935495" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Loan-eligibility-check" path="/kie-server/services/rest/server/containers/instances/loan-eligibility-check" id="31ebb5a3-c8ab-4727-80a9-5b53bb8e9775"><con:settings/><con:parameters/><con:method name="Loan-eligibility-check" id="60754d02-248e-4369-b64d-0071dd32d0d7" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:loan="http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check">loan:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>404 400</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>403</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/octet-stream</con:mediaType><con:status>500 404</con:status><con:params/><con:element>exception</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>deployment-unit</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>405</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:request name="Request 1" id="f1cad9b3-2785-43bf-bceb-736cb59825c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+   "lookup":"loanSession",
+   "commands":[
+      {
+         "insert":{
+            "out-identifier":"Response",
+            "object":{
+               "cnk.taxcalculation.Root":{
+                  "header":{
+                     "transactionID":"12345",
+                     "sessionID":"abc@123",
+                     "operationName":"Search",
+                     "userID":"Sachin"
+                  },
+                  "gstCalculationIntake":{
+                     "companyName":"CnK",
+                     "companyMarket":"India",
+                     "country":"India",
+                     "state":"Maharashtra",
+                     "clientType":"B2B",
+                     "clientCategory":"CG",
+                     "clientSubCategory":"CS1",
+                     "validity":"2018-05-10T00:00:00",
+                     "supplierPricingDetails":[
+                        {
+                           "supplierName":"TAJ",
+                           "clientName":"AkbarTravels",                           
+                           "isThirdParty":false,
+                           "rateFor":"Hotel",
+                           "travelDetails":[
+                              {
+                                 "travellingCountry":"India",
+                                 "travellingState":"Maharashtra",
+                                 "travellingCity":"Mumbai",
+                                 "fareDetails":[
+                                    {
+                                       "totalFare":2000,
+                                       "fareBreakUp":[
+                                          {
+                                             "name":"Base",
+                                             "value":1800
+                                          },
+                                          {
+                                             "name":"YQ",
+                                             "value":150
+                                          },
+                                          {
+                                             "name":"ABC",
+                                             "value":50
+                                          },
+                                          {
+                                             "name":"ServiceCharge",
+                                             "value":100
+                                          },
+                                          {
+                                             "name":"ManagementFees",
+                                             "value":120
+                                          },
+                                          {
+                                             "name":"Commission",
+                                             "value":50
+                                          }
+                                       ],
+                                       "isMarkedUp":false,
+                                       "additionalCharges":200,
+                                       "sellingPrice":2470,
+                                       "product":"Accommodation",
+                     			    "subType":"Hotel",
+                                       "starCategory":5,
+                                       "cabinClass":"",
+                                       "flighType":"",
+                                       "amendmentCharges":0,
+                                       "cancellationCharges":0,                      			    
+                     			    "mealPlan":"MAP",
+                     			    "supplierRateType":"12546",
+                     			    "supplierRateCode":"95687",
+                     			    "isPackage":false                                      
+                                    },
+                                    {
+                                       "totalFare":800,
+                                       "fareBreakUp":[
+                                          {
+                                             "name":"Base",
+                                             "value":600
+                                          },
+                                          {
+                                             "name":"YQ",
+                                             "value":150
+                                          },
+                                          {
+                                             "name":"ABC",
+                                             "value":50
+                                          },
+                                          {
+                                             "name":"ServiceCharge",
+                                             "value":30
+                                          },
+                                          {
+                                             "name":"ManagementFees",
+                                             "value":10
+                                          },
+                                          {
+                                             "name":"Commission",
+                                             "value":20
+                                          }
+                                       ],
+                                       "isMarkedUp":false,
+                                       "additionalCharges":0,
+                                       "sellingPrice":860,
+                                       "product":"Accommodation",
+                     			    "subType":"Hotel",
+                                       "starCategory":5,
+                                       "cabinClass":"",
+                                       "flighType":"",
+                                       "amendmentCharges":0,
+                                       "cancellationCharges":0,                                                             			    
+                     			    "mealPlan":"MAP",
+                     			    "supplierRateType":"12546",
+                     			    "supplierRateCode":"95687",                     			    
+                     			    "isPackage":false
+                                    }
+                                 ]
+                              }
+                           ],
+                           "lor":"Delhi",
+                           "pos":"Delhi"
+                        }
+                     ]
+                  }
+               }
+            }
+         }
+      },
+      {
+         "fire-all-rules":{
+
+         }
+      }
+   ]
+}</con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>kieserver</con:username><con:password>kieserver1!</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Copy of Request 1" id="f1cad9b3-2785-43bf-bceb-736cb59825c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"lookup":"stateless",
+		"commands":[{
+				"insert":{
+			            "out-identifier":"Response",
+			            "object":{
+			            	"tutorial.loaneligibilty.Customer":{
+			            		"custAge":26,
+			            		"custSalary":125000
+			            	}
+			            }
+				}
+		},
+		{
+				"start-process":{
+					"processId":"tutorial.loaneligibilty.customerloanevaluation"
+				}
+		}
+		]
+}</con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="HREvaluation" id="f1cad9b3-2785-43bf-bceb-736cb59825c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"lookup":"stateless",
+		"commands":[
+		{
+"start-process": {
+      "processId": "evaluation",
+      "parameter": [
+         {
+            "key": "reason",
+            "value": {
+               "@type": "xs:string",
+               "#text": "Yearly performance evaluation"
+            }
+         },
+         {
+            "key": "employee",
+            "value": "sachin"
+         }
+      ]
+   }
+		}
+		]
+}</con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Copy of HREvaluation" id="f1cad9b3-2785-43bf-bceb-736cb59825c3" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="CONTENT-TYPE" value="application/xml" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<command-request>
+  <deployment-id>org.jbpm:Evaluation:1.0</deployment-id>
+  <ver>6.5.0.1</ver>
+  <user>sachin</user>
+  <start-process processId="evaluation">
+    <parameter>
+      <item key="reason">
+        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Yearly performance evaluation</value>
+      </item>
+      <item key="employee">
+        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">krisv</value>
+      </item>
+    </parameter>
+  </start-process>
+</command-request>]]></con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="CheckFinancialStatus" id="f1cad9b3-2785-43bf-bceb-736cb59825c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"lookup":"stateless",
+		"commands":[{
+				"insert":{
+			            "out-identifier":"Response",
+			            "object":{
+			            	"tutorial.loaneligibilty.Customer":{
+			            		"custName": "Jack",
+			            		"custAge":26,
+			            		"custSalary":125000
+			            	}
+			            }
+				}
+		},
+		{
+				"start-process":{
+					"processId":"LoanEligibilty.CheckFinancialRecord"
+				}
+		}
+		]
+}</con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="hr-evaluation" path="/kie-server/services/rest/server/containers/instances/hr-evaluation" id="27a49d38-b7fa-4d7a-9243-bf97076173a8"><con:settings/><con:parameters/><con:method name="Method 1" id="dc161377-dc29-46b3-b474-4a74aaf1dfb6" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:hr="http://localhost/kie-server/services/rest/server/containers/instances/hr-evaluation">hr:Response</con:element></con:representation><con:request name="HREvaluationJSON" id="da829c76-6d3a-4181-a33c-09dcda87fb72" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"lookup":"stateless",
+		"commands":[
+		{
+"start-process": {
+      "processId": "evaluation",
+      "parameter": [
+         {
+            "key": "reason",
+            "value": {
+               "@type": "xs:string",
+               "#text": "Yearly performance evaluation"
+            }
+         },
+         {
+            "key": "employee",
+            "value": "sachin"
+         }
+      ]
+   }
+		}
+		]
+}</con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/hr-evaluation</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="execute" path="/jbpm-console/rest/execute" id="f1cb017b-bbaf-4345-8367-a9eba8ee9163"><con:settings/><con:parameters/><con:method name="Method 1" id="d2778391-5f9b-49a7-94c6-887cd87657e4" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>command-response</con:element></con:representation><con:request name="HREvaluationXML" id="3641e7ce-eb0c-44b6-b3ca-af4947f607d6" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="CONTENT-TYPE" value="application/xml" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<command-request>
+  <deployment-id>org.jbpm:Evaluation:1.0</deployment-id>
+  <ver>6.5.0.1</ver>
+  <user>sachin</user>
+  <start-process processId="evaluation">
+    <parameter>
+      <item key="reason">
+        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Yearly performance evaluation</value>
+      </item>
+      <item key="employee">
+        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">krisv</value>
+      </item>
+    </parameter>
+  </start-process>
+</command-request>]]></con:request><con:originalUri>http://localhost/jbpm-console/rest/execute</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3095ad60-9211-4e23-9782-826c812c088f" activeEnvironment="Default" name="REST Project 2" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="9d812c35-553c-453f-b0ac-5b62aae6a4ca" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Loan-eligibility-check" path="/jbpm-console/rest/execute" id="eff997a9-8502-485e-af32-d68e9277824f"><con:settings/><con:parameters/><con:method name="Loan-eligibility-check" id="7dfc4796-2a2b-4ce9-b895-dd68726827b1" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>415</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="e2995253-6f07-4d72-bf9e-e98f3af4c75d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"lookup":"stateless",
+		"commands":[
+		{
+"start-process": {
+      "processId": "evaluation",
+      "parameter": [
+         {
+            "key": "reason",
+            "value": "Yearly performance evaluation"
+         },
+         {
+            "key": "employee",
+            "value": "sachin"
+         }
+      ]
+   }
+		}
+		]
+}</con:request><con:originalUri>http://localhost/jbpm-console/rest/execute</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Copy of Request 1" id="e2995253-6f07-4d72-bf9e-e98f3af4c75d" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="CONTENT-TYPE" value="application/xml"/>
+  &lt;con:entry key="KIE-DEPLOYMENT-ID" value="Tutorial:LoanEligibilty:1.0"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<command-request>
+  <deployment-id>Tutorial:LoanEligibilty:1.0</deployment-id>
+  <ver>6.5.0.1</ver>
+  <user>admin</user>
+  <start-process processId="tutorial.loaneligibilty.customerloanevaluation">
+    <parameter>
+      <item key="customer">
+        <value xsi:type="tutorial.loaneligibilty.Customer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <custAge>90</custAge>
+          <custSalary>200000</custSalary>
+        </value>
+      </item>
+    </parameter>
+  </start-process>
+</command-request>]]></con:request><con:originalUri>http://localhost/kie-server/services/rest/server/containers/instances/loan-eligibility-check</con:originalUri><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

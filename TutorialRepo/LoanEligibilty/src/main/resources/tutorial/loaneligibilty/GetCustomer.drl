@@ -1,0 +1,6 @@
+package tutorial.loaneligibilty;
+import tutorial.loaneligibilty.Customer;
+
+query "GetCustomerQuery"
+customer:Customer();
+end

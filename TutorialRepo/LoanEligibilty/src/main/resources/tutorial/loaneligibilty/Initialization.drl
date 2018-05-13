@@ -1,0 +1,12 @@
+package tutorial.loaneligibilty;
+
+rule "InitializeCustomer"
+	dialect "mvel"
+	ruleflow-group "initialize"
+	no-loop
+	when
+		cust : Customer( )
+	then
+		update(cust);
+		System.out.println("Inside InitializeCustomer : "+cust.getCustAge());
+end

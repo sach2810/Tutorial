@@ -1,0 +1,13 @@
+package tutorial.loaneligibilty;
+
+import java.lang.Number;
+
+rule "CheckFinancialStatus"
+	dialect "mvel"
+	ruleflow-group "financial status"
+	when
+		customer : Customer( custSalary >= 10000.0B )
+	then
+		customer.setStatus( "APPROVED" );
+		System.out.println("Inside DRL");
+end
